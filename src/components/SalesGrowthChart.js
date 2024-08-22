@@ -18,7 +18,7 @@ function SalesGrowthChart() {
     });
 
     useEffect(() => {
-        axios.get('http://localhost:5000/getOverallSalesGrowthRate')
+        axios.get('https://shopify-back.vercel.app/getOverallSalesGrowthRate')
             .then(res => {
               
                 if (res.data && Array.isArray(res.data)) {
