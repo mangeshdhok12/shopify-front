@@ -12,7 +12,7 @@ const TotalSalesChart = () => {
     const [interval, setInterval] = useState('daily'); // Default interval
 
     useEffect(() => {
-        axios.get(`https://shopify-back.vercel.app/getTotalSales?interval=${interval}`)
+        axios.get(`https://shopify-backend-fw6d.onrender.com/getTotalSales?interval=${interval}`)
             .then(response => {
                 const salesData = response.data;
                 // Extract labels and data based on the selected interval
