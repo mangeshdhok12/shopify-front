@@ -23,7 +23,7 @@ const LifetimeValueChart = () => {
     const [customerCounts, setCustomerCounts] = useState([]);
 
     useEffect(() => {
-        axios.get('https://shopify-back.vercel.app/getCustomerLifetimeValueByCohort')
+        axios.get('https://shopify-backend-fw6d.onrender.com/getCustomerLifetimeValueByCohort')
             .then(response => {
                 const lifetimeData = response.data;
                 const labels = lifetimeData.map(item => `${item._id.cohort}/${item._id.year}`);
