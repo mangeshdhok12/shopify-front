@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import RepeatCustomersChart from './components/RepeatCustomerChart'
+import GeoDistributionChart from './components/GeoDistributionChart'
+import LifetimeValueChart from './components/LifetimeValueChart'
+// import SalesGrowthChart from './components/TotalGrowthChart'
+import SalesGrowthChart from './components/SalesGrowthChart'
+import NewCustomersChart from './components/NewCustomerChart'
+import TotalSalesChart from './components/TotalSalesChart'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+
+  <TotalSalesChart/>
+  <SalesGrowthChart/>
+  <NewCustomersChart/>
+  <RepeatCustomersChart/>
+  <GeoDistributionChart/> 
+  <LifetimeValueChart/>
+
+    </>
+  )
 }
 
-export default App;
+export default App
