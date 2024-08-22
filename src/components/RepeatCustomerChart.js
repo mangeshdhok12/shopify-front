@@ -10,7 +10,7 @@ const RepeatCustomersChart = () => {
     const [interval, setInterval] = useState('daily'); // Default to daily
 
     useEffect(() => {
-        axios.get(`https://shopify-back.vercel.app/getRepeatCustomers?interval=${interval}`)
+        axios.get(`https://shopify-backend-fw6d.onrender.com/getRepeatCustomers?interval=${interval}`)
             .then(response => {
                 const repeatData = response.data;
                 const labels = repeatData.map(item => {
