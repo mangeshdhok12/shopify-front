@@ -10,7 +10,7 @@ const NewCustomersChart = () => {
     const [labels, setLabels] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/getNewCustomers')
+        axios.get('https://shopify-back.vercel.app/getNewCustomers')
             .then(response => {
                 const customerData = response.data;
                 const labels = customerData.map(item => {
