@@ -8,7 +8,7 @@ const GeoDistributionChart = () => {
     const [cities, setCities] = useState([]);
 
     useEffect(() => {
-        axios.get('https://shopify-back.vercel.app/getCustomerDistribution')
+        axios.get('https://shopify-backend-fw6d.onrender.com/getCustomerDistribution')
             .then(response => {
                 setCities(response.data);
             })
